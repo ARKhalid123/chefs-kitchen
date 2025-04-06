@@ -1,0 +1,891 @@
+/* Add padding to body to prevent content from hiding behind fixed navbar */
+body {
+    padding-top: 80px;
+}
+
+.navbar {
+    padding: 1rem 4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #374151 !important;
+    transition: all 0.3s ease;
+}
+
+/* Add a class for when navbar is scrolled */
+.navbar.scrolled {
+    padding: 0.5rem 4rem;
+    background-color: rgba(55, 65, 81, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-link {
+    color: #9CA3AF ;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #DF6853 !important;
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: #E5E7EB;
+}
+
+.phone-number a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.phone-number a:hover {
+    color: #DF6853;
+}
+
+.phone-number i {
+    color: white;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.phone-number:hover i {
+    color: #DF6853;
+}
+
+.sign-up-btn {
+    background-color: #374151;
+    color: #E5E7EB;
+    border: 2px solid #DF6853;
+    border-radius: 20px;
+    margin-right: 15px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    background-color: #DF6853;
+    color: #E5E7EB;
+}
+
+.sign-in-btn {
+    background-color: #374151;
+    color: #E5E7EB;
+    text-decoration: none;
+    border: 2px solid #DF6853;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #DF6853;
+    color: #E5E7EB;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background-color: #374151;
+    padding: 6rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding-left: 2rem;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: #E5E7EB;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-btn {
+    background-color: #374151;
+    color: #E5E7EB;
+    border: 2px solid #DF6853;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #DF6853;
+    color: #E5E7EB;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Burger Image Styles */
+.burger-image {
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    max-width: 300px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Expert Chefs Section */
+.expert-chefs-section {
+    position: relative;
+    padding-top: 150px;
+    background-color: #311F1C;
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+    background-color: black;
+    padding: 5rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.gallery-item-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.price {
+    color: #DF6853;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.gallery-btn {
+    background-color: #DF6853;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background-color: #c55a47;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Newsletter Section Styles */
+.newsletter-section {
+    background-color: #DF6853;
+    padding: 5rem 0;
+}
+
+.newsletter-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.newsletter-input::placeholder {
+    color: #818789;
+}
+
+.newsletter-input:focus {
+    outline: none;
+}
+
+.newsletter-submit {
+    background-color: black;
+    border: none;
+    padding: 0 1.5rem;
+    color: #DF6853;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.newsletter-submit:hover {
+    color: #c55a47;
+}
+
+.newsletter-submit i {
+    font-size: 1.2rem;
+}
+
+/* Footer Section Styles */
+.footer-section {
+    background-color: black;
+    padding: 5rem 0;
+}
+
+.footer-brand {
+    padding-right: 2rem;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-brand-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.footer-description {
+    color: #818789;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #DF6853;
+    transform: translateY(-3px);
+}
+
+.social-icon:hover i {
+    color: white;
+}
+
+/* Footer Link Hover Styles */
+.footer-section a:hover {
+    color: #DF6853 !important;
+}
+
+/* Sign Up Modal Styles */
+ .modal-content { 
+    background-color: #374151;
+    border: none;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.modal-backdrop.show {
+    backdrop-filter: blur(5px);
+}
+
+.social-signup-btn {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: #374151;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-signup-btn:hover {
+    background-color: #DF6853;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.social-signup-btn i {
+    margin-right: 8px;
+}
+
+.signup-input {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.signup-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-input:focus {
+    background-color: transparent;
+    border-color: #DF6853;
+    color: white;
+    box-shadow: none;
+}
+
+.signup-submit-btn {
+    background-color: #DF6853;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signup-submit-btn:hover {
+    background-color: #c55a47;
+    transform: translateY(-2px);
+}
+
+.terms-text {
+    color: #818789;
+    font-size: 0.9rem;
+}
+
+.terms-link {
+    color: #DF6853;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-link:hover {
+    color: #c55a47;
+} 
+.signup-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.signup-content {
+    background-color: #1F2937;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-signup-btn {
+    background-color: #374151;
+    border: 1px solid #4B5563;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-signup-btn:hover {
+    background-color: #4B5563;
+    border-color: #6B7280;
+}
+
+.social-signup-btn i {
+    font-size: 1.2rem;
+}
+
+.signup-input {
+    background-color: #374151;
+    border: 1px solid #4B5563;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.signup-input:focus {
+    background-color: #374151;
+    border-color: #DF6853;
+    color: white;
+    box-shadow: none;
+}
+
+.signup-input::placeholder {
+    color: #9CA3AF;
+}
+
+.signup-submit-btn {
+    background-color: #DF6853;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signup-submit-btn:hover {
+    background-color: #C55A47;
+    transform: translateY(-2px);
+}
+
+.terms-text {
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.terms-link {
+    color: #DF6853;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-link:hover {
+    color: #C55A47;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    /* Navbar Responsive */
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .navbar.scrolled {
+        padding: 0.5rem 2rem;
+    }
+
+    .phone-number {
+        display: none;
+    }
+
+    .sign-up-btn, .sign-in-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section Responsive */
+    .hero-section {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Features Section Responsive */
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Cooking Section Responsive */
+    .cooking-section {
+        padding: 3rem 0;
+    }
+
+    .cooking-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .burger-image {
+        max-width: 200px;
+        bottom: -100px;
+    }
+
+    /* Expert Chefs Section Responsive */
+    .expert-chefs-section {
+        padding-top: 100px;
+    }
+
+    /* Gallery Section Responsive */
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Newsletter Section Responsive */
+    .newsletter-content h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .newsletter-submit {
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* Footer Section Responsive */
+    .footer-brand {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-section .col-md-4 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Navbar Responsive */
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Section Responsive */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Features Section Responsive */
+    .section-title {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Cooking Section Responsive */
+    .cooking-section h2 {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+    }
+
+    .cooking-section p {
+        font-size: 0.9rem;
+    }
+
+    /* Gallery Section Responsive */
+    .gallery-item {
+        height: 250px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .gallery-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Newsletter Section Responsive */
+    .newsletter-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .newsletter-content p {
+        font-size: 1.5rem;
+    }
+
+    /* Footer Section Responsive */
+    .footer-brand-text {
+        font-size: 1.5rem;
+    }
+
+    .footer-description {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Navbar Responsive */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand span {
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 25px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    /* Hero Section Responsive */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+
+    /* Features Section Responsive */
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-card i {
+        font-size: 2.5rem;
+    }
+
+    .feature-card h4 {
+        font-size: 1.2rem;
+    }
+
+    /* Cooking Section Responsive */
+    .cooking-section {
+        padding: 2rem 0;
+    }
+
+    .cooking-section img {
+        margin-bottom: 2rem;
+    }
+
+    /* Gallery Section Responsive */
+    .gallery-item {
+        height: 200px;
+    }
+
+    .gallery-overlay {
+        padding: 1rem;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-item-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Newsletter Section Responsive */
+    .newsletter-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .newsletter-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Footer Section Responsive */
+    .footer-section {
+        padding: 3rem 0;
+    }
+
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Sign Up/Sign In Pages Responsive */
+@media (max-width: 991px) {
+    .signup-container, .signin-container {
+        padding: 1rem;
+    }
+
+    .signup-content, .signin-content {
+        padding: 1.5rem;
+    }
+
+    .social-signup-btn {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-input {
+        padding: 0.6rem;
+    }
+
+    .signup-submit-btn {
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .signup-content, .signin-content {
+        padding: 1rem;
+    }
+
+    .social-signup-btn {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .signup-input {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-submit-btn {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .terms-text {
+        font-size: 0.8rem;
+    }
+}
+
