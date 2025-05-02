@@ -28,7 +28,7 @@ body {
 }
 
 .nav-link {
-    color: #9CA3AF ;
+    color: #9CA3AF;
     font-weight: 500;
     font-size: 1.4rem;
     margin: 0 10px;
@@ -98,6 +98,162 @@ body {
     color: #E5E7EB;
 }
 
+/* Receipt Styles */
+.receipt-content {
+    background-color: #1F2937;
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid #DF6853;
+    position: relative;
+    overflow: hidden;
+}
+
+.receipt-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, transparent 50%, rgba(223, 104, 83, 0.1) 50%);
+    border-radius: 0 0 0 100%;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.receipt-header h3 {
+    color: #DF6853;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.receipt-date {
+    color: #9CA3AF;
+    font-size: 0.9rem;
+}
+
+.receipt-details {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-details p {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.receipt-details p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.receipt-details p span:first-child {
+    color: #9CA3AF;
+    font-weight: 500;
+}
+
+.receipt-details p span:last-child {
+    color: white;
+    font-weight: 600;
+}
+
+.table-number {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #DF6853;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.receipt-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.receipt-footer .receipt-logo {
+    margin-bottom: 1rem;
+}
+
+.receipt-footer p {
+    color: #9CA3AF;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    .modal-content, .modal-content * {
+        visibility: visible;
+    }
+    
+    .modal-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .receipt-content {
+        background-color: white;
+        color: black;
+        border: 1px solid #ddd;
+    }
+    
+    .receipt-header h3 {
+        color: #DF6853;
+    }
+    
+    .receipt-details {
+        background-color: #f8f9fa;
+    }
+    
+    .receipt-details p span:first-child {
+        color: #666;
+    }
+    
+    .receipt-details p span:last-child {
+        color: black;
+    }
+    
+    .table-number {
+        background-color: #DF6853;
+        color: white;
+    }
+    
+    .receipt-footer p {
+        color: #666;
+    }
+    
+    .btn {
+        display: none;
+    }
+}
+
 /* Hero Section Styles */
 .hero-section {
     background-color: #374151;
@@ -139,11 +295,13 @@ body {
     padding: 12px 30px;
     font-size: 1.1rem;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .hero-btn:hover {
     background-color: #DF6853;
     color: #E5E7EB;
+    transform: translateY(-2px);
 }
 
 .hero-image {
@@ -549,7 +707,6 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 991px) {
-    /* Navbar Responsive */
     .navbar {
         padding: 1rem 2rem;
     }
@@ -565,6 +722,19 @@ body {
     .sign-up-btn, .sign-in-btn {
         padding: 6px 15px;
         font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 
     /* Hero Section Responsive */
@@ -750,7 +920,6 @@ body {
 }
 
 @media (max-width: 575px) {
-    /* Navbar Responsive */
     .navbar {
         padding: 0.5rem 1rem;
     }
@@ -767,18 +936,17 @@ body {
         font-size: 1rem;
     }
 
-    /* Hero Section Responsive */
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 0.5rem;
     }
 
     .hero-btn {
         width: 100%;
+        margin-bottom: 0.5rem;
     }
 
     /* Features Section Responsive */
