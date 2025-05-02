@@ -61,7 +61,7 @@
                         <h1>Cook anything with the experts</h1>
                         <p style="color: #818789;">Discover the joy of cooking with our expert chefs. Learn new recipes, techniques, and create amazing dishes in your own kitchen.</p>
                         <div class="hero-buttons">
-                            <button class="hero-btn">Let's Cook</button>
+                            <button class="hero-btn book-table-btn" data-bs-toggle="modal" data-bs-target="#bookTableModal">Book a Table</button>
                             <button class="hero-btn">Explore</button>
                         </div>
                     </div>
@@ -380,6 +380,8 @@
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="app.js"></script>
 
@@ -478,6 +480,99 @@
                             </p>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Table Modal -->
+    <div class="modal fade" id="bookTableModal" tabindex="-1" aria-labelledby="bookTableModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="Logo.svg" alt="Brand Logo" style="height: 40px; width: auto;">
+                            <span style="font-weight: bolder; font-size: 1.4rem; color: white; margin-left: 10px;">Book Your Table</span>
+                        </div>
+                    </div>
+
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control signup-input" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control signup-input" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control signup-input" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="date" class="form-control signup-input" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="time" class="form-control signup-input" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control signup-input" required>
+                                <option value="">Number of Persons</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3">3 Persons</option>
+                                <option value="4">4 Persons</option>
+                                <option value="5">5 Persons</option>
+                                <option value="6">6 Persons</option>
+                                <option value="7">7+ Persons</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control signup-input" placeholder="Special Requests (Optional)" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn signup-submit-btn w-100 mb-3">Book Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="Logo.svg" alt="Brand Logo" style="height: 40px; width: auto;">
+                            <span style="font-weight: bolder; font-size: 1.4rem; color: white; margin-left: 10px;">Chef's Kitchen.</span>
+                        </div>
+                    </div>
+                    <div id="receiptContent" class="receipt-content">
+                        <div class="receipt-header">
+                            <h3>Table Reservation Confirmation</h3>
+                            <div class="receipt-date"></div>
+                        </div>
+                        <div class="receipt-details">
+                            <!-- Receipt content will be dynamically inserted here -->
+                        </div>
+                        <div class="table-number">
+                            <!-- Table number will be inserted here -->
+                        </div>
+                        <div class="receipt-footer">
+                            <div class="receipt-logo">
+                                <img src="Logo.svg" alt="Brand Logo" style="height: 30px; width: auto;">
+                            </div>
+                            <p>Thank you for choosing Chef's Kitchen!</p>
+                            <p>For any queries, please contact us at: +1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button id="printReceipt" class="btn signup-submit-btn">
+                            <i class="fas fa-print me-2"></i> Print Receipt
+                        </button>
+                        <button id="downloadReceipt" class="btn signup-submit-btn">
+                            <i class="fas fa-download me-2"></i> Download PDF
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
